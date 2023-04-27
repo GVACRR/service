@@ -27,7 +27,7 @@ pipeline {
             sh "docker push $DOCKER_CREDENTIALS_USR/hello-img:${MAJOR_VERSION}.\$((${MINOR_VERSION} + 1)).${PATCH_VERSION}"
 
             sh "git tag ${env.IMAGE_TAG}"
-            sh "git push https://$GITHUB_TOKEN@github.com/radu%2Drotaru/service.git ${env.IMAGE_TAG}"
+            sh "git push https://$GITHUB_TOKEN@github.com/GVACRR/service.git ${env.IMAGE_TAG}"
           }
         }
 
