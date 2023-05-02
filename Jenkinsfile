@@ -35,6 +35,7 @@ pipeline {
             steps {
                 sh "IMAGE_TAG=${env.IMAGE_TAG} DOCKER_HUB_USERNAME=$DOCKER_CREDENTIALS_USR docker-compose up -d hello"
                 sh './gradlew testIT'
+                sh './gradlew testE2E'
             }
         }
     }
